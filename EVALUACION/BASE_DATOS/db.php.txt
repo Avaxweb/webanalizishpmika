@@ -1,0 +1,16 @@
+<?php
+$link=mysqli_connect('localhost','root','')or die ("NO ENCUENTRO EL ARCHIVO");
+$db=mysqli_select_db('comida', $link)or die ('ERROR DE CONEXION');
+$NOMBRE=$_POST['NOMBRE'];
+$USUARIO=$_POST['USUARIO'];
+$CONTRASEÑA=$_POST['CONTRASEÑA'];
+$CONTRASEÑAC=$_POST['CONTRASEÑAC'];
+mysql_query("INSERT INTO dieta VALUES ('NOMBRE','USUARIO','CONTRASEÑA','CONTRASEÑAC') ",$link ) or die ("EROR GUARDAR");
+echo'
+<h2>REGISTRO HECHO </h2>
+<h5> GRACIAS POR VISITARNOS</5>
+'
+
+;
+}
+?>
